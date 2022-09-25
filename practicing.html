@@ -14,6 +14,9 @@
       font-size: 20px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+    div {
+      margin: 10px;
+    }
   </style>
   
   <title>I'm practicing!</title>
@@ -29,26 +32,43 @@
   <img src="img/zack.jpg" alt="my baby boy" height="300px">
   <hr>
   <!-- Practicing some stuff below -->
-  <input type="text" class="search-bar" placeholder="Try typing in this box">
-  <br>
-  <p>2 types of submit buttons</p>
-  <input type="button" value="Submit"> input type="button" value="name on the button"
-  <br>
-  <button type="submit">Submit</button> A normal button with the type="submit"
-  <br>
+  <div>
+    <input type="text" class="search-bar" placeholder="Try typing in this box">
+    <br>
+    <p>2 types of submit buttons</p>
+    <input type="button" value="Submit"> 
+    <br>
+    <button type="submit">Submit</button> 
+  </div>
+  <h2>Practice. Following: <a href="https://www.skillshare.com/en/classes/HTML-CSS-Building-Responsive-Websites-For-Beginners-version-2-0/1481065028"> Skillshare page</a></h2>
   <!-- Testing radio inputs -->
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="female">Female
-  <br>
+  <div>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female
+  </div>
   <!-- Checkboxes -->
-  <input type="checkbox" name="vehicle-1" value="bike">bike
-  <input type="checkbox" name="vehicle-2" value="car"> Car
+  <div>
+    <input type="checkbox" name="vehicle-1" value="bike">bike
+    <input type="checkbox" name="vehicle-2" value="car"> Car
+  </div>
   <!-- Select Menus -->
-  <br>
-  <select name="size">
-    <option value="small" selected>small</option>
-    <option value="medium">medium</option>
-    <option value="large">large</option>
-  </select>
+  <div>
+    <select name="size">
+      <option value="small" selected>small</option>
+      <option value="medium">medium</option>
+      <option value="large">large</option>
+    </select>
+</div>
+  <!-- Text area larger box to type in-->
+  <div>
+    <textarea name="message"></textarea>
+  </div>
+<!-- image -->
+<div>
+  <img src="img/kharjo5smol.jpg" alt="my cat Kharjo" title="Kharjo"><br>
+  <p> alt = read outloud from screen reader<br>
+  title is the title of the photo that will appear when moused over </p>
+</div>
+<!-- Links -->
 </body>
 </html>
