@@ -9,31 +9,51 @@
       background-color: rgba(255, 182, 193, 0.637);
       font-size: 20px;
     }
-
-
+    nav {
+      background-color: rgba(76, 0, 130, 0.356);
+    }
+    nav a {
+      color: rgb(150, 88, 7);
+    }
+    nav a:hover {
+      background-color: darkmagenta;
+      color: white;
+    }
   </style>
 
 </header>
-
+<header>
+  <nav>
+  <!-- links to parts of the page -->
+    <a href="#article"> Article |</a> 
+    <a href="#aside">Aside |</a>
+    <a href="#details">Details |</a>
+    <a href="#fig">Figure and Figcaption |</a>
+    <a href="#footer">Footer |</a>
+    <a href="#header">Header |</a> i don't want to add the rest. this is practice after all..
+    
+  </nav>
+</header>
+<main>
   <body>
     
     <div>
 <img src="img/semantic-screenshot.png" width="350px">
     </div>
     <div>
-      <h2>Article</h2>
+      <h2 id="article">Article</h2>
       <code>article</code> a self-contained composition in a doc, page, app, or site which is inteded to be independently distributable or reusable. This could be a forum post a magazine article, blog entry, an object, or any other independent item of content. Each <code>article</code> should be identified by including a heading as a child of the <code>article</code> element.
     </div>
 <div>
-  <h2>Aside</h2>
+  <h2 id="aside">Aside</h2>
   <code>aside</code> represents a section of the page with content connected tangentially to the rest, which could be considered separate from that conent. These sections are often represented as sidebars or inserts. They often contail the definitions on the sidebars, such as definitions from the glossary; there may also be other types of info such as related ads, bio of the author, web apps, profile info, or related links on the blog.
 </div>
 <div>
-  <h2>Details</h2>
+  <h2 id="details">Details</h2>
   <code>details</code> is used as a disclosure widget from which the user can retrieve additional info about the content above.
 </div>
 <div>
-  <h2>Figure and Figcaption</h2>
+  <h2 id="fig">Figure and Figcaption</h2>
   <code>figure</code> represents sef-contained content with a caption <code>figcaption</code>. 
   <br>
   <p>Example:</p>
@@ -41,13 +61,42 @@
   <code>img src="cat.jpg"</code><br>
   <code>figcaption</code> cat photo by Moxie. <code>/figcaption</code><br>
   <code>/figure</code>
-
-  
 </div>
+<div id="footer">
+  <h2>Footer</h2>
+  <code>footer</code> represents a footer for it's section. It typically contains info about the autor of the section, copyright or links related to the documents.
+</div>
+<div id="header">
+  <h2>Header</h2>
+  <code>header</code> represents a group of introductory or navigational aids. May contain heading elements, logo, wrapped section's header, a search for, and so on.
+</div>
+<div id="main">
+  <h2>Main</h2>
+  <code>main</code> the main content
+</div>
+<div id="mark">
+  <h2>Mark</h2>
+  <code>mark</code> represents highlighted text i.e. a run of text marked for reference purpose, due to its relevance in a particular context. For example it can be used in a page showing search results to highlight every instance of the searched-for word.
+</div>
+    
+<div id="nav">
+  <h2>Nav</h2>
+  <code>nav</code> represents a section of a page that links to other parts within the page. It's a section with navigation links.
+</div>
+<div>
+  <h2>Section</h2>
+  <code>section</code> is a generic piece of a document. Everything inside typically has the same theme.
+  Each <code>section</code> should be identified by a heading.
+</div>
+  <div id="time">
+<h2>Time</h2>
+<time datetime="2022-09-15T19:00"> May 15</time><br>
+<code>time</code> represents a time on 24hr clock or a precise date in the calendar.
+  </div>
 
-    
-    
-    
+  <div>
+    <h2></h2>
+  </div>
     <hr>
     <h1> OLDER TEST STUFF</h1>
     <div>
@@ -111,7 +160,10 @@ Google Austin, TX 5 days ago 29 applicants<br>
    info and one another</p>
   </details>
 </div>
-</body></html>
+</body></main>
+<footer> This is a footer yo.</footer>
+
+</html>
 
 
 
