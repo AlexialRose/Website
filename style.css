@@ -6,10 +6,15 @@ header {
   background-color: LightSteelBlue;
   text-align: center;
   padding: 20px 0 20px 0;
-  color: #2980B9;
+
 }
-#pic1 {
- width: 400px;
- border-radius: 10px;
- border: #2980B9 solid 100px;
+header img {
+  width: 400px;
+  border-radius: 10px;
+  border: #2980B9 solid 10px;
+}
+
+header h1 {
+  color: #2980B9;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
