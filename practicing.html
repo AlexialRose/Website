@@ -106,31 +106,72 @@
   <!-- Pseudo Class Selector -->
   <div>
     <h3>Pseudo Class Selector</h3>
-    <p>
-      <a href="index.html">Tester link</a><br><br>
+      <code class="largecode"> : </code> selects elements based on a particular event state or relationship among other elements<br>
       <code> a:link{text-deocration:dashed;}</code> <br>
       <code>a:hover{background-color:blue;}</code>  <br>
       <code>a:visted{color:hotpink;}</code><br>
+      <a href="index.html">Tester link</a><br>
       <code>a:active{background-color:white;]</code><br>
-      <code>p:first-child {font-family: Verdana, Geneva, Tahoma, sans-serif;}</code>
-      <code>p:last-child {font-family: sans-serif; color:aqua} </code>
-      
-      
-      
-    </p>
-    <p><code class="largecode"> : </code> selects elements based on a particular event state or relationship among other elements</p>
-    <code>&lt;a href="#">link&lt;/a></code>
+      <code>p:first-child {font-family: serif;}</code><br>
+      <code>p:last-child {font-family: Impact;} </code>
   </div>
-  <div>
+  <div>    
     <p>first-child</p>
     <p>This is a test</p>
-    <p>last-child</p>
+    <p>last-child</p></div>
   
+  <div>
+    
+   <h3>This wont work</h3>
+    <p> How is this not the first p???</p>
+    <p>>>></p>
+    <p>:D :D:D</p>
   </div>
-    <!-- Code &lt; is the codefor < -->
-  <p style="font-size: 20px; background-color:darksalmon">&lt; = <span class="smol">(with no space)</span> <code>& lt;</code><br> use it instead of &lt; because it fucks things up.</p>
+  
+  <div>
+      <p>Why does it work now with 4 <code>&lt;p></code>'s</p>
+      <p>I seriously don't get it</p>
+      <p>It was working with 3 before, but now it's 4...</p>
+      <p>I'm the last child</p>
+  </div> 
+  <div>
+  <p>it wasn't working before because <code>&lt;h3></code> was the first child not <code>&lt;p></code></p>
+  <p>The same thing will happen if we put a <code>&lt;h1> or &lt;h2> ect..</code>as the last child.</p>
+  <h2>See wont be purple</h2>
+  <h3>You got that? Let's move on to Authority and Inheritance</h3>
+</div> 
+<div>
+  <!-- AUTHORITY AND INHERITANCE -->
+  <h3>Authority and Inheritance</h3>
+  <p>If you use conflicting styles on the same element, descendent over rules ID, over rules Class, over rules * (universal) selector. The more specific a selector is, the more authrity is has!</p>
+  <p>When conflicts with equal authority arise, CSS will apply the last style that is closer to the bottom of the stylesheet ("last man" rule).</p>
+  <p>Certain CSS properties will be inherited from their parent elements.</p>
+  <p> Here is a good <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">Reference</a></p>
+  
 </div>
-<!-- css stuff ends here -->
+       <!-- Code &lt; is the codefor < -->
+  <br><span style="background-color:rgb(66, 60, 36) ;">&lt; = <span class="smol">(with no space)</span> <code style="color:white;">& lt;</code><br> use it instead of &lt; because it fucks things up.</span>
+ <!-- css stuff ends here -->   
+
+ <!-- Text Declarations -->
+ <div>
+  <h3>Text Declarations</h3>
+    <p><code>text-indent:</code>1% | 1em | 1px;<br>
+    <code>text-shadow:</code> 3px 3px 10px green<br>
+    <code>text-align:</code>left, center, right, justify; <br>
+    <code>text-decoration:</code>none, underline, overline, line-through; <br>
+    <code>text-transform:</code> none, capitalize, lowercase, uppercase <br>
+    <code>letter-spacing:</code> normal, 1em, 12px;<br>
+    <code>line-height:</code> normal, 1em, 12px;<br>
+    <code>word-spacing:</code> normal, 1em, 12px;<br>
+    <code>word-wrap:</code>normal, break-word; <br>
+    <code>white-space:</code>normal, no-wrap<br></p>
+    <p> =D</p>
+    
+ </div>
+ 
+
+
 <div id="top">
     <input type="text" class="search-bar" placeholder="Try typing in this box">
     <br>
@@ -200,12 +241,12 @@
 <!-- Validation link -->
 <div>
   <h1>W3C Validation</h1>
-  <p>We can check our code for errors. Visit: <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a>
+  <p>We can check our code for errors. Visit: <a href="https://validator.w3.org/" target="_blank">validator.w3.org for Html</a><br>and <a href="https://jigsaw.w3.org/css-validator/" target="_blank">and jigsaw.w3.org</a>for CSS.<br>
   Enter the address of your webpage. It will show any messed up code.</p>
   <h2>Alt way to check your code</h2>
   <ul>
     <li>Copy all the code and text</li>
-    <li>Go to <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></li>
+    <li>Go to <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a> or <a href="https://jigsaw.w3.org/css-validator/" target="_blank">jigsaw.w3.org</a></li>
     <li>Click on the "Validate by Direct Input" Tab</li>
     <li>Past your code</li>
     <li>Click Check button</li>

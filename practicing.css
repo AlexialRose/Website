@@ -38,7 +38,7 @@ background-color: rgb(70, 92, 92);
 } 
 .smol {
   font-size: 10px;
-  background: none;
+  background: black;
 }
 div > span {
   background-color: rgb(71, 58, 71);
@@ -82,10 +82,16 @@ a:visited {
 a:active {
   background-color: white;
 }
+p {
+  font-family:'Times New Roman', Times, serif;
+  color:rgb(58, 33, 45);
+}
+
 p:first-child {
-  font-family: Verdana;
+  color: rgb(70, 88, 190);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 p:last-child {
-  font-family: 'Dancing Script', cursive;
-  color:rgb(0, 174, 255)
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #660099;
 }
