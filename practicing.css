@@ -1,0 +1,91 @@
+body{
+  line-height: 25px;
+}
+.search-bar {
+  font-size: 30px;
+  color: darkslateblue;
+  font-style: italic;
+  border-radius: 10px;
+  border: dotted 2px palevioletred;
+}
+.search-bar::placeholder {
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div {
+  margin: 10px auto;
+  background-color: rgba(211, 211, 211, 0.562);
+  width: 500px;
+  padding: 15px;
+  border-radius: 30px;
+  color: #660099;
+}
+#css { 
+  width: 850px;
+}
+
+
+.links img {
+  height: 100px;
+}
+.links a {
+  font-size: 18px;
+}
+
+span {
+  color:white;
+background-color: rgb(70, 92, 92);
+} 
+.smol {
+  font-size: 10px;
+  background: none;
+}
+div > span {
+  background-color: rgb(71, 58, 71);
+}
+li {color: darkblue;}
+#list > li {
+  color:hotpink
+}
+.largecode{
+  font-size: 20px;
+}
+
+* {
+  color:#336699
+}
+h3 {
+  color: #7CA2BF;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img[alt="Cat"] {
+  border: 1px solid black;
+  width: 50%;
+  margin:10px;
+}
+td, th {
+  border: #336699 solid 1px;
+}
+.symbol {
+  margin-left: 5px;
+}
+a:link {
+  text-decoration: dashed;
+}
+a:hover {
+  background-color:blue;
+}
+a:visited {
+  color:hotpink;
+}
+a:active {
+  background-color: white;
+}
+p:first-child {
+  font-family: Verdana;
+}
+p:last-child {
+  font-family: 'Dancing Script', cursive;
+  color:rgb(0, 174, 255)
+}

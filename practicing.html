@@ -2,39 +2,11 @@
 <html lang="en">
 <head>
 
-  <style>
-    body{
-      line-height: 25px;
-    }
-    .search-bar {
-      font-size: 30px;
-      color: darkslateblue;
-      font-style: italic;
-      border-radius: 10px;
-      border: dotted 2px palevioletred;
-    }
-    .search-bar::placeholder {
-      font-size: 20px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    div {
-      margin: 10px auto;
-      background-color: rgba(211, 211, 211, 0.562);
-      max-width: 500px;
-      padding: 15px;
-      border-radius: 30px;
-
-    }
-    .links img {
-      height: 100px;
-    }
-    .links a {
-      font-size: 18px;
-    }
-
-</style>
-  
+<link rel="stylesheet" href="practicing.css">
+ 
   <title>I'm practicing!</title>
+
+
 </head>
 <body>
   
@@ -47,7 +19,119 @@
   <img src="img/zack.jpg" alt="my baby boy" height="300px">
   <hr>
   <!-- Practicing some stuff below -->
-  <div id="top">
+  
+ 
+    <!-- some new css --> 
+  <div> 
+    <h1>CSS stuff that's new</h1>
+    <h3>Child Selector</h3>
+    <p><code>div > span {
+      background-color: yellow;}</code><br>
+    "<code class="largecode"> > </code>" Selects only the Elements that are direct children of the matching selector name (not grandchildren)</p>
+
+    <p> this given example doesn't work for some reason <em>edit: it's a rule to override another. there was no li rule to over right. once i wrote one for li it worked</em></p>
+
+        <ul id="list">
+          <li>Child
+            <ul><li>grandchild</li></ul>
+          </li>
+        </ul>
+    <p> But this example from w3schools works just fine. <em>edit: thats because i already had a rule for div.</em></p>
+        <span>Span #1 in the div
+          <span>Span #2 in the span that's in the div</span>
+        </span>
+        <!-- universal selector -->
+    <h3>Universal Selector</h3>
+    <p><code>* {color:black}</code></p>
+    <p><code class="largecode">*</code> will style anything that has not alread been styled by anything else.<br>
+    not sure how this really works.<br> I put div color to a purplish color and  the <code class="largecode">*</code> with blueish color. but as you see... blue color in the div... Also!! I changed h3 color and * didn't replace it... so why does that work and not div? Is it because these are written in paragraphs?</p>
+    I'm trying it out here. And as you see it's purple; the color i picked out for div. So it is because of the <code>p</code> 
+  </div>
+  <div id="css">
+     <!-- Attribute Selector -->
+     <h3>Attribute Select</h3>
+     <p><code>CSS: <br>img[alt="Cat"] {<br> border: 1px solid black;</code><br>}</p>
+     <p><code class="largecode">[ ]</code> selects elements who have an attribute with a matching value condition.</p>
+     <p><code>< img sr="img/kharjo1.jpg" alt="Cat" ></code></p>
+     Let's use the above code and show the results below.<br>
+     <img src="img/kharjo1.jpg" alt="Cat">
+    <!-- different values conditions -->
+    <p>We can apply different values conditions to our attribue salector<br>
+      <!-- TABLE HERE :D -->
+      <table>
+        <tr>
+          <th>Symbol</th>
+          <th>CSS</th>
+          <th>Represents</th>
+          <th>HTML</th>
+          <th>Explain</th>
+        </tr>
+        <tr>
+          <td><code class="largecode symbol">^</code></td>
+          <td><code> a[href^="http"] {color: red}</code></td>
+          <td>Starts with</td>
+          <td><code>&lt;a href="index.html">Home page&lt;/a></code></td>
+          <td>^ searches for all <code>&lt;a ></code>with the attribute that starts with "http"  </td>
+        </tr>
+        <tr>
+          <td><code class="largecode symbol">&</code></td>
+          <td><code>p[class$="dog"] {color:blue;}</code></td>
+          <td>Ends with</td>
+          <td><code>&lt;p class="available dog">...&lt;/p></code></td>
+          <td>$ searching for <code>&lt;p ></code> that has class attribue that ends with dog</td>
+        </tr>
+        <tr>
+          <td><code class="largecode symbol">*</code></td>
+          <td><code>img[alt*="love"{border-color:green;]</code></td>
+          <td>Anywhere within</td>
+          <td><code>&lt;img src="img/zack.html" alt="I love you"></code></td>
+          <td>* it contains that particulare value anywayre with in it's attribue. Looking for img that has alt=love"</td>
+        </tr>
+        <tr>
+          <td class="largecode symbol">~</td>
+          <td><code>p[class~="dog"]{color:red;}</code></td>
+          <td>Space seperated</td>
+          <td><code>&lt;p class="shelter dog shots">...&lt;/p></code></td>
+          <td>I think we get it...</td>
+        </tr>
+        <tr>
+          <td class="largecode symbol">|</td>
+          <td><code>p[class|="dogs]{color:blue;}</code></td>
+          <td>Dash seperated</td>
+          <td><code>&lt;p class="new-dogs-today>...&lt;/p></code></td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+  <!-- Pseudo Class Selector -->
+  <div>
+    <h3>Pseudo Class Selector</h3>
+    <p>
+      <a href="index.html">Tester link</a><br><br>
+      <code> a:link{text-deocration:dashed;}</code> <br>
+      <code>a:hover{background-color:blue;}</code>  <br>
+      <code>a:visted{color:hotpink;}</code><br>
+      <code>a:active{background-color:white;]</code><br>
+      <code>p:first-child {font-family: Verdana, Geneva, Tahoma, sans-serif;}</code>
+      <code>p:last-child {font-family: sans-serif; color:aqua} </code>
+      
+      
+      
+    </p>
+    <p><code class="largecode"> : </code> selects elements based on a particular event state or relationship among other elements</p>
+    <code>&lt;a href="#">link&lt;/a></code>
+  </div>
+  <div>
+    <p>first-child</p>
+    <p>This is a test</p>
+    <p>last-child</p>
+  
+  </div>
+    <!-- Code &lt; is the codefor < -->
+  <p style="font-size: 20px; background-color:darksalmon">&lt; = <span class="smol">(with no space)</span> <code>& lt;</code><br> use it instead of &lt; because it fucks things up.</p>
+</div>
+<!-- css stuff ends here -->
+<div id="top">
     <input type="text" class="search-bar" placeholder="Try typing in this box">
     <br>
     <p>2 types of submit buttons</p>
@@ -121,11 +205,20 @@
   <h2>Alt way to check your code</h2>
   <ul>
     <li>Copy all the code and text</li>
-    <li>Go to <a href="https://validator.w3.org/"></a></li>
+    <li>Go to <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></li>
     <li>Click on the "Validate by Direct Input" Tab</li>
     <li>Past your code</li>
     <li>Click Check button</li>
   </ul>
+<h3>Check using inspect on browser</h3>
+<ul>
+  <li>Open your page in browser</li>
+  <li>Right click on page</li>
+  <li>Inspect</li>
+  <li>Click on Network</li>
+  <li>It'll show some errors</li>
+</ul>
+
 </div>
 <div>
  <h1> HTML References</h1>
