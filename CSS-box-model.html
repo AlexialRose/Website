@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="practicing.css">
+ <style>
+/* W3C */
+.use-content-box {
+  box-sizing: content-box;
+}
+.use-border-box {
+  box-sizing: border-box;
+}
+body {
+    font-size: 1
+        100%;
+}
+
+
+.fixed-size { 
+    width: 200px;
+}
+
+.elastic-size { 
+    width: 12.5em; /* 200px/16px */
+}
+
+.fluid-size { 
+    width: 70%; 
+}
+
+.threshold-size { 
+    min-width: 500px;
+    max-width: 900px;
+}
+
+ </style>
+  <title>I'm learning!</title>
+</head>
+<body>
+  <header>I created this following along with this <a href="https://www.skillshare.com/en/classes/HTML-CSS-Building-Responsive-Websites-For-Beginners-version-2-0/1481065028/projects">Video</a></header>
+  <div>
+    <h1>CSS box sizing property</h1>
+    <img src="img/learning/CSS-box-sizing property.png" width="100%">
+    <p>Tell all browsers to use IE box model or W3C model.</p>
+    <img src="img/learning/2-box-models.png">
+  </div>
+<div class="use-content-box"> Tester box for WC3 model
+  <br> <code>box-sizing: content-box;</code></div>
+<div class="use-border-box"> Tester for IE box model
+  <br><code> box-sizing: border-box;</code>
+</div>
+<div>
+  <h1>Layout types</h1>
+  <p>
+    Fixed (px)<br>
+    Elastic (em)<br>
+    Fluid (%)<br>
+    Using Min/Max Sizing
+  </p>
+</div>
+<div class="fixed-size">
+  Fixed (px)
+  <img src="img/learning/fixed-layouts.png" width="100%">
+</div>
+
+<div class="elastic-size">
+  Elastic (em)
+</div>
+
+<div class="fluid-size">
+  Fluid (%)
+</div>
+
+<div class="threshold-size">
+  Threshold (min/max)
+</div>
+</body>
+</html>
