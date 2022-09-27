@@ -102,9 +102,10 @@
           <td></td>
         </tr>
       </table>
+      <!-- END OF TABLE -->
   </div>
   <!-- Pseudo Class Selector -->
-  <div>
+  <div class="inrowblock">
     <h3>Pseudo Class Selector</h3>
       <code class="largecode"> : </code> selects elements based on a particular event state or relationship among other elements<br>
       <code> a:link{text-deocration:dashed;}</code> <br>
@@ -115,12 +116,12 @@
       <code>p:first-child {font-family: serif;}</code><br>
       <code>p:last-child {font-family: Impact;} </code>
   </div>
-  <div>    
+  <div class="inrowblock">    
     <p>first-child</p>
     <p>This is a test</p>
     <p>last-child</p></div>
   
-  <div>
+  <div class="inrowblock">
     
    <h3>This wont work</h3>
     <p> How is this not the first p???</p>
@@ -128,13 +129,13 @@
     <p>:D :D:D</p>
   </div>
   
-  <div>
+  <div class="inrowblock">
       <p>Why does it work now with 4 <code>&lt;p></code>'s</p>
       <p>I seriously don't get it</p>
       <p>It was working with 3 before, but now it's 4...</p>
       <p>I'm the last child</p>
   </div> 
-  <div>
+  <div class="inrowblock">
   <p>it wasn't working before because <code>&lt;h3></code> was the first child not <code>&lt;p></code></p>
   <p>The same thing will happen if we put a <code>&lt;h1> or &lt;h2> ect..</code>as the last child.</p>
   <h2>See wont be purple</h2>

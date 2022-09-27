@@ -1,46 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="practicing.css">
- <style>
-/* W3C */
-.use-content-box {
-  box-sizing: content-box;
-}
-.use-border-box {
-  box-sizing: border-box;
-}
-body {
-    font-size: 1
-        100%;
-}
+  <link rel="stylesheet" type="text/css" href="practicing2.css">
 
-
-.fixed-size { 
-    width: 200px;
-}
-
-.elastic-size { 
-    width: 12.5em; /* 200px/16px */
-}
-
-.fluid-size { 
-    width: 70%; 
-}
-
-.threshold-size { 
-    min-width: 500px;
-    max-width: 900px;
-}
-
- </style>
   <title>I'm learning!</title>
 </head>
 <body>
   <header>I created this following along with this <a href="https://www.skillshare.com/en/classes/HTML-CSS-Building-Responsive-Websites-For-Beginners-version-2-0/1481065028/projects">Video</a></header>
   <div>
+    <!-- //// CSS BOX SIZING PROPERTY //// -->
     <h1>CSS box sizing property</h1>
-    <img src="img/learning/CSS-box-sizing property.png" width="100%">
+    <img src="img/learning/CSS-box-sizing-property.png" width="100%">
     <p>Tell all browsers to use IE box model or W3C model.</p>
     <img src="img/learning/2-box-models.png">
   </div>
@@ -50,6 +20,7 @@ body {
   <br><code> box-sizing: border-box;</code>
 </div>
 <div>
+  <!-- ////// LAYOUT TYPES ////// -->
   <h1>Layout types</h1>
   <p>
     Fixed (px)<br>
@@ -58,21 +29,60 @@ body {
     Using Min/Max Sizing
   </p>
 </div>
+<!-- fixed -->
 <div class="fixed-size">
   Fixed (px)
   <img src="img/learning/fixed-layouts.png" width="100%">
 </div>
-
+<!-- elastic -->
 <div class="elastic-size">
   Elastic (em)
 </div>
-
+<!-- fluid -->
 <div class="fluid-size">
   Fluid (%)
 </div>
-
+<!-- threshold -->
 <div class="threshold-size">
   Threshold (min/max)
+</div>
+<!-- ///////  CONTENT OVERFLOW ///// -->
+<div>
+  <h1>Content overflow</h1>
+  <p><code>overflow:</code>visible, hidden, scroll, auto;</p>
+</div>
+<div class="hide-content overflow inrowblock">
+  <h1>Hidden</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil labore blanditiis pariatur aspernatur expedita necessitatibus ab eaque a quae aliquam. Officia quisquam quibusdam odit neque consequatur nulla vero explicabo vitae!</p> 
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil labore blanditiis pariatur aspernatur expedita necessitatibus ab eaque a quae aliquam. Officia quisquam quibusdam odit neque consequatur nulla vero explicabo vitae!</p> 
+</div>
+
+<div class="scroll-content overflow inrowblock">
+  <h1>Scroll</h1>
+  <span class="quote">It Is Fine Now. Why? Because I Am Here!</span>
+  <br><span class="quote">Whether You Win Or Lose, Looking Back And Learning From The Experience Is A Part Of Life</span>
+  <br><span class="quote">I Smile To Show The Pressure Of Heroes And To Trick The Fear Inside Of Me.</span>
+  <br><span class="quote">If You Feel Yourself Hitting Up Against Your Limit, Remember For What Cause You Clench Your Fists!</span>
+</div>
+
+<div class="vis-content overflow inrowblock">
+  <h1>Visible</h1>
+  <h3> - it will go outside the box and even show into the the next element</h3>
+  <p><ul>
+    <li><span class="quote">It Is Fine Now. Why? Because I Am Here!</span></li>
+  </ul>
+</p>
+</div>
+<div style="margin-top: 20px;">
+  <h1>Element Display</h1>
+  <img src="img/learning/element-display.png">
+  <p><code>display: inline;</code> appears side by side does not accept width or top and bottom margins.
+  <br><code>display: block;</code> displays one above the other, takes up the whole line. Able to specify width
+  and top and bottom margin.
+<br><code>display: inline-block;</code> displays side by side, allows top and bottom margins, and width to be
+specified</p>
+
+
 </div>
 </body>
 </html>
