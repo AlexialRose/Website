@@ -1,12 +1,10 @@
-/*////////// TABLE //////////*/
-
 table {
   margin: 5px 0 0;
 }
 
 td, th {
   padding: 5px;
-  border-left: 1px dotted #ccc;
+  border-left: 1px dotted #CCC;
 }
 
 th {
@@ -14,5 +12,5 @@ th {
 }
 
 td {
-  border-bottom: 1px solid #ccc;
+  border-bottom:  1px solid #333;
 }

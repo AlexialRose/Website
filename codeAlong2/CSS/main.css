@@ -14,3 +14,6 @@
 
 /* To add your own css from another css file */
 @import url(typography.css);
+@import url(form.css);
+@import url(table.css);
+@import url(layout.css);
