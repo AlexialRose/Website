@@ -1,0 +1,40 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+header, footer {
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+#new {
+  background-color: red;
+  float: left;
+  width: 33.333%
+}
+
+section {
+  padding: 10px
+}
+
+#music {
+  background: yellow;
+  float: left;
+  width: 33.333%
+}
+
+#clothing {
+  background: green;
+  float: left;
+  width: 33.333%
+}
+
+footer {
+  clear: both;
+}
+/* IE box modle incluedes padding inside */
+* {
+  box-sizing: border-box;
+}

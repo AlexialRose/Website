@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/12-unit.css">
+  <title>CSS Custom Grid System</title>
+</head>
+<body>
+  
+
+
+
+  <div>
+    <h1>Grid Containers</h1>
+    <p>First, we can create two containers to wrap our page content. One that will expand 100%
+      width and another that will limit the width to a set amount of pixels and center the content
+      using auto margins</p>
+    <p>
+      <code>
+        .container {<br>
+          width: 960px;><br>
+          Margin: 0 auto; <br>
+         } <br>
+         .container-fluid { <br>
+          width: 100%; <br>
+         }
+      </code>
+    </p>
+    <h1>Grid Rows</h1>
+    <p>Then, we can create row classes to act as vertical separation between rows of columns.
+      These elements will reside inside of our containers and act as parent elements to columns
+      that will reside inside of them.
+    </p>
+    <p>
+      <code>
+        row { <br>
+          clear: both; /* Insures rows always stack vertically. */<br>
+         }<br>
+         /* apply clearfix to all rows to prevent them from collapsing their height */<br>
+         .row:after {<br>
+          content: ".";<br>
+          display: block;<br>
+          clear: both;<br>
+          visibility: hidden; height: 0; line-height: 0;<br>
+         }
+      </code>
+    </p>
+    <h1>Grid Columns</h1>
+    <p>
+      Next, we set all column classes to float in order to disply side by side nd give them a left
+  margin (except on the first column in a row) if space is desired between your columns.
+    </p>
+    <p>
+      <code>
+        [class^="col-"] {
+          float: left;
+          margin-left: 2%;
+         }
+         [class^="col-"]:first-child {
+          margin-left: 0;
+         }
+      </code>
+    </p>
+  </div>
+  
+  <div>
+    <h1>Grid Strategy</h1>
+    <p> Lastly, we set widths for all the different size column possibilities. Let's assume a 12
+      column grid. Then simple math allows us to calculate the width each column should be.
+      100% divided by the number of columns minus any margin between them equals our
+      column width.
+    </p>
+    <p>
+      
+    </p>
+    <p>Now we can make any layout we require by applying the class names:
+    </p>
+    <p>
+      <code>
+        &lt;div class="container"><br>
+        &lt;div class="row"><br>
+        &lt;div class="col-4"> A &lt;/div><br>
+        &lt;div class="col-4"> B &lt;/div><br>
+        &lt;div class="col-4"> C &lt;/div><br>
+        &lt;/div><br>
+        &lt;/div>
+      </code><br>
+    </p>
+    <p>
+      This products a three column grid where each column takes up 1/3rd the width of the 12
+  column <a href="12-unit-floating-grid.html">grid. </a>
+    </p>
+  
+  </div>
+  <div>
+    <h1>Container Class</h1>
+    <p>We can create 2 contains to wrap our page content. One that will expand 100% width and another that will limit the width to a set amount of pixels and center  the content using auto margins.</p>
+    <p>
+      <code>
+        .container { <br>
+          width: 960px;<br>
+          margin: 0 auto
+      </code>
+    </p>
+    <p>
+      <code>
+        .container-fluid {<br>
+        width: 100%<br>
+        }
+      </code>
+    </p>
+  </div>
+  <div>
+    <h1>Row Class</h1>
+    <p>We can create row classes to act as vertical seperation between rows of columns. These elements will resie inside of our containers and act as parent elements to columns that will reside inside of them.</p>
+    <p>
+      <code>
+        .row{ <br>
+          clear:both;}  &lt;!-- Insures rows always stack vertically -->
+
+      </code>
+    </p>
+    <p>
+      &lt;!-- apply clearfix to all rows to prevent them form collapsing their height --><br>
+      <code>
+        .row:after {<br>
+        content: "."; <br>
+        display: block;<br>
+        clear: both;<br>
+        visibility: hidden; height:0; line-height:0;}
+      </code>
+    </p>
+  </div>
+
+  <div>
+    <h1>Column Classes</h1>
+    <p>We set all column classs to float in order to display side by side and give them a left margin (except on the first column in a row) if space is disired between your columns.</p>
+    <p>
+      <code>
+        [class^="col-"] { <br>
+          float: left; <br>
+          margin-left: 0;}
+      </code>
+    </p>
+    <p>
+      <code>
+        [class^="col-"]:first-child {<br>
+          margin-left: 0;
+        }
+      </code>
+    </p>
+    <p>We set widths for all the different size column possibilities. Let's assume as 12 unit grid. Then simple math allows us to calculate the width each column should be.
+    </p>
+    <p>
+      <code>
+        .col-1 { width: 6.5%; } <br>
+        .col-2 { width: 15%; }<br>
+        .col-3 { width: 23.5%; }<br>
+        .col-4 { width: 32%; }<br>
+        .col-5 { width: 40.5%; }<br>
+        .col-6 { width: 49%; }<br>
+        .col-7 { width: 57.5%; }<br>
+        .col-8 { width: 66%; }<br>
+        .col-9 { width: 74.5%; }<br>
+        .col-10 { width: 83%; }<br>
+        .col-11 { width: 91.5%; }<br>
+        .col-12 { width: 100%; }<br>
+      </code>
+    </p>
+    <h1>Width Formula</h1>
+    <p> Column width= (row width - total margin / number of columns.<br>
+    Assuming we are using IE box model.</p>
+    .col-6 width = ( 100% - 2% ) / 2<br>
+    .col-6 width =  98% / 2<br>
+    .col-6 width = 49% <br>
+    So:<br>
+    <code>
+      .col-6 {width=49%;}
+    </code>
+  <p>If using W3C:<br> column width= (row width -margin -padding -border ) / number of columns. </p>
+    </div>
+    <div style="padding-bottom: 50px;"><img src="img/widthFormula.png"></div>
+    <hr>
+    <h1>CSS Using Third Party Grids</h1> 
+<div>
+<p>You can search <a href="https://www.google.com/search?q=css+grid+system&rlz=1C1SQJL_enUS897US897&oq=css+grid+system&aqs=chrome.0.0i512l7j69i60.2229j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Google</a> for custom grids.</p>
+<ul>
+  <li><a href="https://materializecss.com/grid.html" target="_blank">materializecss</a></li>
+  <li><a href="https://960.gs/" target="_blank">960</a></li>
+  <li><a href="https://getbootstrap.com/docs/3.4/css/" target="_blank">getbootstrap</a></li>
+</ul>
+</div>
+
+<hr>
+<h1>Examples of grids with codes above
+  
+</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-6"> col-6 </div>
+    <div class="col-6"> col-6 </div>
+  </div>
+  <div class="row">
+    <div class="col-4"> col-4 </div>
+    <div class="col-4"> col-4 </div>
+    <div class="col-4"> col-4</div>
+  </div>
+</div>
+<hr>
+<div class="container">
+
+  <div class="row">
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+    <div class="col-1">1</div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">2</div>
+    <div class="col-2">2</div>
+    <div class="col-2">2</div>
+    <div class="col-2">2</div>
+    <div class="col-2">2</div>
+    <div class="col-2">2</div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">3</div>
+    <div class="col-3">3</div>
+    <div class="col-3">3</div>
+    <div class="col-3">3</div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">4</div>
+    <div class="col-4">4</div>
+    <div class="col-4">4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-5">5</div>
+    <div class="col-5">5</div>
+    <div class="col-2">2</div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">6</div>
+    <div class="col-6">6</div>
+  </div>
+
+  <div class="row">
+    <div class="col-7">7</div>
+    <div class="col-5">5</div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">8</div>
+    <div class="col-4">4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-9">9</div>
+    <div class="col-3">3</div>
+  </div>
+
+  <div class="row">
+    <div class="col-10">10</div>
+    <div class="col-2">2</div>
+  </div>
+
+  <div class="row">
+    <div class="col-11">11</div>
+    <div class="col-1">1</div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">12</div>
+  </div>
+
+</div>
+</body>
+</html>

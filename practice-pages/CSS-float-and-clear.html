@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layouts Using Floating Grids</title>
+
+  <style>
+    section {
+    background: rgba(211, 211, 211, 0.562);
+    padding: 20px;
+    margin: 10px;
+    width: 500px;
+    margin: 10px auto;
+    border-radius: 30px;
+
+}
+
+
+
+article {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+}
+
+#jazz article {
+    float: left;
+    background: rgb(80, 112, 112);
+}
+
+#rock article {
+    float: right;
+    background: rgb(26, 68, 107);
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+  </style>
+
+</head>
+<body>
+  <!-- floating -->
+  <div class="container auto">
+    <h1>Floating</h1>
+    <img src="img/floating.png"><br>
+    <code>
+      #sidebar {<br>
+        float: left;<br>
+       }<br>
+       #main {<br>
+        float: right;<br>
+       }<br>
+    </code>
+  </div>
+
+  <div class="container">
+    <h1>Clearing</h1>
+    <img src="img/clear.png"><br>
+    <code>footer {
+      clear: both;
+     }</code>
+  </div>
+<!-- Float and Clear Example -->
+  <div class="container auto">
+    <h1> Float and Clear Example</h1>
+    <p><strong>Float wont affect content above it.</strong></p>
+    <img class="left smallpic" src="img/allmightThumbsup.jpg" alt="All Might">
+    <p> "if you feel yourself hitting up against your limit, remember for what cause you clench your fists... remember why you started down this path, and let that memory carry you beyond your limit", believe in this and you will achieve anything!</p>
+ 
+    <p class="clearboth"><strong> This paragraph is set to clear: both;. It behaves and falls below the pic. </strong>"It's true that heroes have many things to protect. And that's why… We cannot lose!"</p>
+    <p> "I must do this! Why? Because I am the symbol of peace!"</p> 
+    <p> "A hero can always break out of a tough spot."</p>
+    
+  </div>
+  <!-- Collapsed Parent -->
+  <div class="container">
+    <h1> Collapsed Parent</h1>
+    <img src="img/collapsedParent.png">
+    <p> Green boxes are float left.<br>
+      They should fit the div, but instead the div is only as tall as the text.
+    </p>
+    <!-- Clearfix Solution -->
+    <h3>Clearfix Solution</h3>
+    <p> Always applie clearfix to parent element</p>
+    <p>
+      <code>
+         .clearfix:after {<br>
+        content: ".";<br>
+        display: block;<br>
+        clear: both;<br>
+        visibility: hidden;<br>
+        height: 0;<br>
+        line-height: 0;<br>
+       }
+      </code>
+    </p>
+    <p> You can also just <a href="https://www.google.com/search?q=css+clearfix&rlz=1C1SQJL_enUS897US897&sxsrf=ALiCzsakkzIRoP4nCnqw4xKIqLNYUSWqfw%3A1664269052993&ei=_LoyY8GiPLWw0PEPmP6c0AU&ved=0ahUKEwjBkNutzbT6AhU1GDQIHRg_B1oQ4dUDCA4&uact=5&oq=css+clearfix&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQhgMyBQgAEIYDOgQIIxAnOhEILhCABBCxAxCDARDHARDRAzoICC4QsQMQgwE6CwgAEIAEELEDEIMBOgYIABAKEEM6BAgAEEM6CAgAELEDEIMBOgoIABCxAxCDARBDOgsILhCABBDHARCvAToHCAAQsQMQQzoICAAQgAQQyQM6BwgAEIAEEApKBAhBGABKBAhGGABQAFj0DGDKD2gAcAF4AIABY4gBjgeSAQIxMpgBAKABAcABAQ&sclient=gws-wiz" target="_blank">Google it.</a></p>
+   <h3> Apply Class of Clearfix</h3>
+<code>&lt;div class="container clearfix"><br>
+ I'm a static parent.<br>
+ &lt;div class="box left"><br>
+ I'm a box floating left.
+ &lt;/div><br>
+ I need a clearfix class if you do not want me to collapse when I have floating children
+inside me!<br>
+&lt;/div></code>
+  </div>
+  <section id="jazz" class="clearfix">  
+    <article> Miles D </article>
+    <article> BB King </article>
+</section>
+
+<section id="rock" class="clearfix"> 
+    <article> AC/DC </article>
+    <article> Black Sabbath </article>  
+</section>
+<!-- centering with Margin -->
+<div width="1200px">
+  <h1> Centering with Margin</h1>
+  <p>
+    <code>
+      &lt;style><br>
+        .container {<br>
+        margin: 0 auto;<br>
+        }<br>
+        &lt;/syle><br>
+        &lt;div class="container><br>
+        Here we use auto margin to center this box.
+  </p>
+       
+    </code>
+  </p>
+  Check out the code for the page below @ <a href="float-layout.html">float-layout.html</a>
+      <!-- iframe -->
+  <iframe src="float-layout.html"  height="300" width="400" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+
+</body>
+</html>
